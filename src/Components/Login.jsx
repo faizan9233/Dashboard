@@ -19,7 +19,7 @@ const Login = () => {
             setLoading(true);
             await login(email, password);
             toast.success("Logged in successfully");
-            navigate('/');
+            navigate('/dashboard');
         } catch {
             setError('Failed to log in');
             toast.error("Don't have an account. Please sign up");
@@ -34,7 +34,7 @@ const Login = () => {
             setLoading(true);
             await googleSignIn();
             toast.success("Logged in successfully with Google");
-            navigate('/');
+            navigate('/dashboard');
         } catch {
             setError('Failed to log in with Google');
             toast.error("Failed to log in with Google");
